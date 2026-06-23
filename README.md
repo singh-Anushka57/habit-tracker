@@ -4,10 +4,6 @@
 
 A React + Vite habit tracker with daily check-ins, streak calculations, a CSS grid heatmap, and a full insights dashboard.
 
----
-
----
-
 ## 🚀 Running Locally
 
 ```bash
