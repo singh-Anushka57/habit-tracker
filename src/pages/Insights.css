@@ -1,0 +1,152 @@
+.insights-page { padding-bottom: 60px; }
+
+.insights-header { margin-bottom: 28px; }
+.insights-header h1 { margin-bottom: 6px; }
+.insights-sub { color: var(--text-secondary); }
+
+/* Stats grid */
+.insights-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Best habit banner */
+.best-habit-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+  background: linear-gradient(135deg, var(--bg-card), rgba(var(--bh-color), 0.05));
+  border-color: rgba(var(--bh-color), 0.3);
+  border-left: 4px solid var(--bh-color, var(--violet));
+  padding: 24px;
+}
+
+.best-habit-trophy { font-size: 2.5rem; flex-shrink: 0; }
+
+.best-habit-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+}
+
+.best-habit-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.best-habit-meta { display: flex; align-items: center; gap: 12px; }
+.best-habit-rate { font-size: 0.9rem; color: var(--text-secondary); font-family: var(--font-mono); }
+
+/* Section */
+.insights-section { margin-top: 16px; }
+.insights-section h2 { margin-bottom: 16px; }
+
+.insights-habit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Per habit card */
+.insight-habit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.ihc-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.ihc-left { display: flex; align-items: flex-start; gap: 10px; }
+.ihc-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.ihc-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+.ihc-trophy { font-size: 1.3rem; }
+
+.ihc-stats {
+  display: flex;
+  gap: 16px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.ihc-stat { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+
+.ihc-stat-val {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.ihc-stat-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* Momentum */
+.ihc-momentum { display: flex; flex-direction: column; gap: 8px; }
+
+.ihc-momentum-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.momentum-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.momentum-track {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-elevated);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.momentum-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: barFill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.momentum-score {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  min-width: 28px;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .insights-stats { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .insights-stats { grid-template-columns: repeat(2, 1fr); }
+  .best-habit-card { flex-direction: column; align-items: flex-start; }
+}

@@ -1,0 +1,214 @@
+.home-page {
+  overflow-x: hidden;
+}
+
+/* ---- HERO ---- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 80px;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--violet-light);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border: 1px solid var(--violet-dim);
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(124, 92, 252, 0.08);
+}
+
+.hero-headline {
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+
+.hero-accent {
+  background: linear-gradient(135deg, var(--violet-light), var(--amber-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 460px;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-stat-val {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flame-icon {
+  font-size: 1.6rem;
+  display: inline-block;
+  animation: streakFlame 0.9s ease-in-out infinite;
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+/* Live global stat - CSS animation only */
+.global-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.global-stat-pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--mint);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.global-stat-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--mint);
+  animation: pulseRing 1.5s ease-out infinite;
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.global-stat-number {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--mint);
+  animation: countUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.global-stat-text { color: var(--text-secondary); }
+
+/* Hero SVG */
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-svg {
+  width: 100%;
+  max-width: 420px;
+  filter: drop-shadow(0 0 40px rgba(124, 92, 252, 0.2));
+}
+
+/* ---- FEATURES ---- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding-bottom: 80px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  border-radius: var(--radius);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.feature-card:hover {
+  border-color: var(--violet-dim);
+  transform: translateY(-3px);
+}
+
+.feature-icon { font-size: 1.8rem; }
+
+.feature-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .features { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+    padding-top: 16px;
+  }
+  .hero-sub { max-width: 100%; margin-left: auto; margin-right: auto; }
+  .hero-stats { justify-content: center; }
+  .hero-actions { justify-content: center; }
+  .global-stat { justify-content: center; }
+  .hero-right { order: -1; }
+  .hero-svg { max-width: 280px; }
+  .features { grid-template-columns: 1fr 1fr; gap: 12px; }
+}
+
+@media (max-width: 480px) {
+  .features { grid-template-columns: 1fr; }
+}

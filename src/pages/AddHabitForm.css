@@ -1,0 +1,122 @@
+.add-habit-container {
+  max-width: 600px;
+  padding-bottom: 60px;
+}
+
+.add-habit-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.add-habit-header h1 { font-size: 1.8rem; }
+.add-habit-sub { color: var(--text-secondary); margin-top: 4px; }
+
+.add-habit-form { display: flex; flex-direction: column; }
+
+/* Category Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.category-btn {
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: left;
+}
+
+.category-btn:hover { border-color: var(--cat-color); color: var(--text-primary); }
+
+.category-btn.selected {
+  border-color: var(--cat-color);
+  background: rgba(var(--cat-color), 0.1);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 1px var(--cat-color), 0 0 12px rgba(124,92,252,0.15);
+}
+
+/* Day picker */
+.day-picker {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.day-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-btn:hover { border-color: var(--violet); color: var(--text-primary); }
+.day-btn.selected {
+  background: var(--violet);
+  border-color: var(--violet);
+  color: #fff;
+}
+
+/* Color preview */
+.color-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* Success splash */
+.success-splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.success-icon { font-size: 4rem; }
+
+@media (max-width: 480px) {
+  .form-actions { flex-direction: column; }
+  .form-actions .btn { width: 100%; justify-content: center; }
+}
