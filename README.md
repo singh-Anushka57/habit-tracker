@@ -6,25 +6,6 @@ A React + Vite habit tracker with daily check-ins, streak calculations, a CSS gr
 
 ---
 
-## 📋 Assignment Coverage
-
-| Section | Points | Status |
-|--------|--------|--------|
-| Top Navigation Bar (fixed, responsive, hamburger) | 20 | ✅ |
-| Dashboard Home (two-col layout, CTA, live stat + animation) | 20 | ✅ |
-| `<AddHabitForm />` (validation, inline errors, edit/delete) | 30 | ✅ |
-| `<DailyDashboard />` (cards, streak calc, progress bar, animations) | 40 | ✅ |
-| `<ConsistencyGrid />` (CSS grid heatmap, tooltip, filter) | 40 | ✅ |
-| `<Insights />` (stats, best habit, per-habit cards) | 25 | ✅ |
-| `<AboutPage />` (app info, tech stack, learnings + fun) | 10 | ✅ |
-| **BONUS** — React Router + 404 page | 30 | ✅ |
-| **BONUS** — localStorage persistence | 10 | ✅ |
-| **BONUS** — Streak Freeze Token | 10 | ✅ |
-| **BONUS** — Pomodoro Timer (linked to habits) | 20 | ✅ |
-| **BONUS** — Habit Momentum Score (0-100) | 15 | ✅ |
-
-**Total: 185 core + 65 bonus = 250 points attempted**
-
 ---
 
 ## 🚀 Running Locally
